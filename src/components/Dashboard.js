@@ -1,9 +1,10 @@
 import React from 'react';
-import '../../App';
-import '../../App.css';
+import '../App';
 import { Link } from 'react-router-dom';
+import './Main.css';
 
-function Home() {
+
+function Main() {
   return (
     <section className="container">
       <div className="header">
@@ -43,4 +44,4 @@ function Home() {
   )
 }
 
-export default Home;
+export default Main;

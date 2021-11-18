@@ -15,6 +15,7 @@ const ColoredLine = ({ color }) => (
   />
 );
 
+
 export default function Schedule() {
   return (
     <div>
@@ -24,7 +25,7 @@ export default function Schedule() {
         </Col>
 
         <Col className="right-section">
-          <h1 a style={styles.e}>
+          <h1>
             Schedule
           </h1>
           <p className="right-section-p">We're so grateful that you'll be attending our wedding. We'll see you in Mexico City.</p>

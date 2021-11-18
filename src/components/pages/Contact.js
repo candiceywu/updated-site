@@ -16,7 +16,7 @@ export default function Contact() {
                         Contact
                     </h1>
                     <p className="right-section-p">Have questions or comments?</p>
-                    <p a style={styles.p}>Please feel free to call, email or text us at any time.</p>
+                    <p className="right-section-p-2">Please feel free to call, email or text us at any time.</p>
 
                     <Row className="right-section-subsection">
                         <Col xs md lg="4" className="right-section-subsection-1">

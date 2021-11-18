@@ -1,14 +1,17 @@
-.navbar-header {
-  font-size: 100px;
+.navbar {
+  background-color: transparent;
+  height: 500px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
-.navbar {
-    background-color: transparent;
-    height: 800px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-}
+.navbar-header {
+  font-size: 100px;
+} 
 
 .nav-ul {
     list-style: none;
@@ -16,16 +19,13 @@
     align-items: center;
     background-color: transparent;
     text-align: left;
-    width: 60vw;
-    padding: 130px 0px 130px 820px;
     justify-content: end;
     margin-right: 2rem;
   }
   
   .nav-li {
     color: #fff;
-    list-style: none;
-    /* background-color: transparent; */
+    list-style-type: none;
     text-decoration: none;
     align-items: center;
     justify-content: flex-end;
@@ -38,6 +38,12 @@
     color: #1c38ba;
     font-size: 46px;
   }
+
+  a {
+    text-decoration: none;
+    color: #1c38ba;
+  }
+ 
   
   .nav-links:hover {
     border-bottom: 2px solid #fff;

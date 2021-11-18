@@ -15,14 +15,14 @@ export default function Lodging () {
                     <h1>
                         Lodging
                     </h1>
-                    <p className="right-section-p">Again, thank you so much for attending our wedding and celebrating with us. Once we get settled into our married life, we're looking forward to planning our honeymoon. If you'd like to contribute a gift, we'd graciously accept any cash gifts for our honeymoon fund that you would be comfortable giving.</p>
+                    <p className="right-section-p">hotel text here.</p>
 
                     <Row className="right-section-subsection">
                         <Col xs md lg="4" className="right-section-subsection-1">
-                            <p>Lian's Venmo:<br></br>@Lian-Han</p>
+                            <p>Hyatt Regency<br></br>address</p>
                         </Col>
                         <Col className="right-section-subsection-2">
-                            <p>Candice's Venmo:<br></br>@Candicewu</p>
+                            <p>Airbnbs<br></br>info</p>
                         </Col>
                     </Row>
                 </Col>

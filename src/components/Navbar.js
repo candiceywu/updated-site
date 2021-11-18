@@ -1,49 +1,49 @@
 import React from 'react';
 import '../App';
-import '../App.css';
+import './Navbar.css';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
     return (
-        <section>
-            <div  className="navbar-header">
-                <h1 a style={styles.header}>Candice Wu <br></br>& Lian Han</h1>
+        <nav className="navbar">
+            <div className="navbar-header">
+                <h1>Candice Wu <br></br>& Lian Han</h1>
             </div>
-            <div a style={styles.pages} className="Navbar">
+            <div className="Navbar">
                 <ul className='nav-ul'>
                     <li className='nav-li'>
-                        <Link a style={styles.links} to="/">
+                        <Link to="/">
                             Home
                         </Link>
                     </li>
                     <li className='nav-li'>
-                        <Link a style={styles.links} to="/lodging">
+                        <Link to="/lodging">
                             Lodging
                         </Link>
                     </li>
                     <li className='nav-li'>
-                        <Link a style={styles.links} to="/schedule">
+                        <Link to="/schedule">
                             Schedule
                         </Link>
                     </li>
                     <li className='nav-li'>
-                        <Link a style={styles.links} to="/ceremony">
+                        <Link to="/ceremony">
                             Ceremony
                         </Link>
                     </li>
                     <li className='nav-li'>
-                        <Link a style={styles.links} to="/gifting">
+                        <Link to="/gifting">
                             Gifting
                         </Link>
                     </li>
                     <li className='nav-li'>
-                        <Link a style={styles.links} to="/contact">
+                        <Link to="/contact">
                             Contact
                         </Link>
                     </li>
                 </ul>
             </div>
-        </section>
+        </nav>
     )
 }
 

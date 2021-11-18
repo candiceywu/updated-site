@@ -9,24 +9,21 @@ import Schedule from './components/pages/Schedule';
 import Contact from './components/pages/Contact';
 
 
-
-
-
 function App() {
+
   return (
-    <>
+    <div>
       <Router>
-        {/* <Home /> */}
-        <Switch>
+          <div className="container-fluid">
           <Route path='/' exact component={Home} />
           <Route path='/schedule' component={Schedule} />
           <Route path='/ceremony' component={Ceremony} />
           <Route path='/lodging' component={Lodging} />
           <Route path='/gifting' component={Gifting} />
           <Route path='/contact' component={Contact} />
-        </Switch>
+          </div>
       </Router>
-    </>
+    </div>
   );
 }
 
