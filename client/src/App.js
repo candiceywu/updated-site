@@ -7,13 +7,22 @@ import {
 } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import './App.css';
-import Home from './components/pages/Home';
-import Ceremony from './components/pages/Ceremony';
-import Gifting from './components/pages/Gifting';
-import Lodging from './components/pages/Lodging';
-import Schedule from './components/pages/Schedule';
-import Contact from './components/pages/Contact';
+
+import Home from "./pages/Home";
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
+import Greeting from "./pages/Greeting";
+import Dashboard from "./pages/Dashboard";
+import NavTabs from "./components/NavTabs";
+import Journal from "./pages/Journal";
+// import Mood from "./components/Mood"
+
+import moment from 'moment';
+
+
+// import Chart from './components/Chart';
+// import Upload from "./components/Upload";
+// import Logout from "./components/Logout";
 
 
 const httpLink = createHttpLink({
@@ -41,18 +50,86 @@ const client = new ApolloClient({
 
 function App() {
 
+  const [morning, setMorning] = useState(false);
+  const [day, setDay] = useState(false);
+  const [evening, setEvening] = useState(false);
+
+  const styles = {
+    morning: {
+      backgroundColor: '#e6d192ff',
+      height: "150vh",
+      color: '#ac3b12',
+    },
+    day: {
+      backgroundColor: '#b3d993ff',
+      height: "150vh",
+      color: '#579620ff',
+    },
+    evening: {
+      backgroundColor: 'lightblue',
+      height: "150vh",
+      color: '#2455a2',
+    }
+  };
+
+  useEffect (() => {
+    if (window.moment().format('H') < 9) {
+
+      handleSetMorning()
+  
+    } else if (window.moment().format('H') < 17) {
+  
+      handleSetDay()
+  
+    } else {
+  
+      handleSetEvening()
+  
+    }
+  })
+
+  const handleSetMorning = () => {
+    setMorning(true)
+  }
+
+  const handleSetDay = () => {
+    setDay(true)
+  }
+
+  const handleSetEvening = () => {
+    setEvening(true)
+  }
+
   return (
 
     <ApolloProvider client={client} >
-            <Router>
-        <Switch>
-          <Route path='/' exact component={Home} />
-          <Route path='/schedule' component={Schedule} />
-          <Route path='/ceremony' component={Ceremony} />
-          <Route path='/lodging' component={Lodging} />
-          <Route path='/gifting' component={Gifting} />
-          <Route path='/contact' component={Contact} />
-        </Switch>
+      <Router>
+        <div className="flex-column justify-flex-start min-100-vh mobile" style={morning ? styles.morning : day ? styles.day : styles.evening}>
+          <NavTabs />
+          {/* <Picture />  */}
+          <div className="container-fluid">
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/login">
+              <Login />
+            </Route>
+            <Route exact path="/signup">
+              <Signup />
+            </Route>
+            <Route exact path="/greeting">
+              <Greeting />
+            </Route>
+            <Route exact path="/dashboard">
+              <Dashboard />
+              {/* <Mood/> */}
+            </Route>
+            <Route exact path="/journal">
+              <Journal />
+            </Route>
+          </div>
+          {/* <Footer /> */}
+        </div>
       </Router>
     </ApolloProvider>
   );
