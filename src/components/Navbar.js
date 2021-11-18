@@ -1,24 +1,7 @@
 import React from 'react';
+import '../App';
+import '../App.css';
 import { Link } from 'react-router-dom';
-import './Navbar.css';
-
-const styles = {
-    header: {
-      fontSize: '64px',
-      color: '#1c38ba',
-      padding: '90px 0px 90px 80px'
-    },
-    pages: {
-      color: 'inherit',
-      fontSize: '36px',
-      padding: '0px 0px 0px 70px'
-    },
-    links: {
-        textDecoration: 'none',
-        color: '#1c38ba'
-    }
-  }
-  
 
 function Navbar() {
     return (

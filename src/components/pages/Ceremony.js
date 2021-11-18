@@ -1,34 +1,23 @@
 import React from 'react';
 import '../../App.css';
-import './DustAndGray.css';
 import { Row, Col } from 'react-bootstrap';
 import Navbar from '../Navbar';
 
-const styles = {
-  a: {
-    background: '#DDDDDD'
-  },
-  h1: {
-    color: '#7a2b23',
-    fontSize: '120px',
-    fontWeight: 'bold'
-  }
-}
 
 export default function Ceremony() {
   return (
     <div>
-      <Row className="schedule-container">
-        <Col xs md lg="3" className="left-bar">
+      <Row className="container">
+        <Col xs md lg="3" className="left-section">
           <Navbar />
         </Col>
 
-        <Col a style={styles.a} className="schedule-section">
+        <Col className="right-section">
           <div>
-            <h1 a style={styles.h1}>
+            <h1>
               Ceremony
             </h1>
-            <p className="schedule-section-text">Our wedding will take place on Friday, April 15, 2022 from 4:30PM to 1:00AM at Proyecto Público Prim 30 (Calle Gral. Prim 30, Juárez, Cuauhtémoc, 06600 CDMX).</p>
+            <p className="right-section-p">Our wedding will take place on Friday, April 15, 2022 from 4:30PM to 1:00AM at Proyecto Público Prim 30 (Calle Gral. Prim 30, Juárez, Cuauhtémoc, 06600 CDMX).</p>
           </div>
           <div>
             <h2>Dress Code</h2>
