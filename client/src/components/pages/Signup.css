@@ -1,0 +1,25 @@
+.signup-main {
+    height: 100vh;
+    width: 100%;
+    background-image: url('../assets/journal.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.signup {
+    width: 40%;
+    position: absolute;
+    top: 150px;
+    left: 150px;
+}
+
+.form-spacing {
+    margin-right: 25px;
+}
+
+.button-spacing {
+    margin-top: 25px;
+    margin-left: 70px;
+}
