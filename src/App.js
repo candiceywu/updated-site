@@ -39,12 +39,12 @@ function App() {
     <div className="App">
       {(user.password != "") ? (
         <div className="container-fluid">
-          <Route path='/' component={Home}/>
-          <Route path='/schedule' component={Schedule} />
-          <Route path='/ceremony' component={Ceremony} />
-          <Route path='/lodging' component={Lodging} />
-          <Route path='/gifting' component={Gifting} />
-          <Route path='/contact' component={Contact} />
+          <Route exact path='/'> <Home /> </Route>
+          <Route exact path='/schedule'> <Schedule /> </Route>
+          <Route exact path='/ceremony'> <Ceremony /> </Route>
+          <Route exact path='/lodging'> <Lodging /> </Route>
+          <Route exact path='/gifting'> <Gifting /> </Route>
+          <Route exact path='/contact'> <Contact /> </Route>
         </div>
       ) : (
         <LoginForm login={login} error={error} />
