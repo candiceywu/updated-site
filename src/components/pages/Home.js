@@ -13,6 +13,11 @@ function Home() {
       </div>
       <div className="home-pages">
         <ul className='home-ul'>
+        <li className='nav-li'>
+            <Link to={'/attendance'}>
+              RSVP
+            </Link>
+          </li>
           <li className='nav-li'>
             <Link to={'/schedule'}>
               Schedule

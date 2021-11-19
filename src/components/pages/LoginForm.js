@@ -14,6 +14,7 @@ function LoginForm ({ login, error }) {
 
         login(details);
     }
+    
     return (
         <form onSubmit={submitHandler}>
             <div className="form-inner">

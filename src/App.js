@@ -8,6 +8,7 @@ import Gifting from './components/pages/Gifting';
 import Lodging from './components/pages/Lodging';
 import Schedule from './components/pages/Schedule';
 import Contact from './components/pages/Contact';
+import Attendance from './components/pages/Attendance';
 
 function App() {
   const adminUser = {
@@ -45,6 +46,7 @@ function App() {
           <Route exact path='/lodging'> <Lodging /> </Route>
           <Route exact path='/gifting'> <Gifting /> </Route>
           <Route exact path='/contact'> <Contact /> </Route>
+          <Route exact path='/attendance'> <Attendance /> </Route>
         </div>
       ) : (
         <LoginForm login={login} error={error} />
