@@ -1,19 +1,42 @@
 @import url(//db.onlinewebfonts.com/c/9da41c570d5a221cb2486d78769a076d?family=Neue+Helvetica);
-* {
-  font-family: 'Helvetica-neue';
-  margin-top: 0;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
+
+.App {
+  text-align: center;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-top: 100px;
 }
 
-/* whatever files are in pages folder, render css here: Ceremony, Contact, Gifting, Lodging, Schedule, Home */
+.App-Column {
+  flex-direction: column;
+}
 
-@media screen and (max-width: 375px) {
-  .mobile {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-  }
+.login-container {
+  width: 400px;
+}
+
+.form {
+  display: flex;
+  border: 1px solid #ddd;
+  flex-direction: column;
+  padding: 20px;
+}
+
+p {
+  margin-top: 0;
+}
+
+input {
+  margin: 15px 0;
+  padding: 10px;
+}
+
+.submit {
+  padding: 10px;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
 }

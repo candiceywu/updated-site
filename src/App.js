@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import LoginForm from './components/pages/LoginForm';
 import './App.css';
 import Home from './components/pages/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -8,12 +9,50 @@ import Lodging from './components/pages/Lodging';
 import Schedule from './components/pages/Schedule';
 import Contact from './components/pages/Contact';
 
-
 function App() {
+  const adminUser = {
+    password: 'CandoandLianCDMX'
+  }
+
+  const [user, setUser] = useState({ password: "" });
+  const [error, setError] = useState("");
+
+  const login = details => {
+    console.log(details);
+
+    if (details.password == adminUser.password) {
+      console.log('logged in');
+      setUser({
+        password: details.password
+      })
+    } else {
+      console.log("password does not match.")
+    }
+  }
+
+  const logout = () => {
+    console.log("logout");
+  }
 
   return (
-    <div>
-      <Router>
+    <Router>
+    <div className="App">
+      {(user.password != "") ? (
+        <div className="welcome">
+          <Route path='/' exact component={Home}/>
+        </div>
+      ) : (
+        <LoginForm login={login} error={error} />
+      )}
+    </div>
+    </Router>
+  );
+}
+
+export default App;
+
+
+{/* <Router>
           <div className="container-fluid">
           <Route path='/' exact component={Home} />
           <Route path='/schedule' component={Schedule} />
@@ -22,9 +61,4 @@ function App() {
           <Route path='/gifting' component={Gifting} />
           <Route path='/contact' component={Contact} />
           </div>
-      </Router>
-    </div>
-  );
-}
-
-export default App;
+      </Router> */}

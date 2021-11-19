@@ -1,10 +1,11 @@
 import React from 'react';
 import '../../App';
 import '../../App.css';
-import { Link } from 'react-router-dom';
+import { Link, Router } from 'react-router-dom';
 
 function Home() {
   return (
+    <Router>
     <section className="container">
       <div className="header">
         <header>Candice Wu</header>
@@ -40,6 +41,7 @@ function Home() {
         </ul>
       </div>
     </section >
+    </Router>
   )
 }
 

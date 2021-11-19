@@ -2,6 +2,7 @@ import React from 'react';
 import '../../App.css';
 import { Row, Col } from 'react-bootstrap';
 import Navbar from '../Navbar';
+import Home from './Home';
 
 
 export default function Ceremony() {
