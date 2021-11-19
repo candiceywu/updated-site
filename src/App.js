@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import LoginForm from './components/pages/LoginForm';
 import './App.css';
 import Home from './components/pages/Home';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Ceremony from './components/pages/Ceremony';
 import Gifting from './components/pages/Gifting';
 import Lodging from './components/pages/Lodging';
@@ -39,7 +39,7 @@ function App() {
     <div className="App">
       {(user.password != "") ? (
         <div className="container-fluid">
-          <Route path='/Home' component={Home}/>
+          <Route path='/home' component={Home}/>
           <Route path='/schedule' component={Schedule} />
           <Route path='/ceremony' component={Ceremony} />
           <Route path='/lodging' component={Lodging} />

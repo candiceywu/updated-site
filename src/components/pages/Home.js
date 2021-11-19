@@ -5,7 +5,7 @@ import { Link, Router } from 'react-router-dom';
 
 function Home() {
   return (
-    <Router>
+    
     <section className="container">
       <div className="header">
         <header>Candice Wu</header>
@@ -14,34 +14,34 @@ function Home() {
       <div className="home-pages">
         <ul className='home-ul'>
           <li className='nav-li'>
-            <Link to='/schedule'>
+            <Link to={'/schedule'}>
               Schedule
             </Link>
           </li>
           <li className='nav-li'>
-            <Link to='/lodging'>
+            <Link to={'/lodging'}>
               Lodging
             </Link>
           </li>
           <li className='nav-li'>
-            <Link to='/ceremony'>
+            <Link to={'/ceremony'}>
               Day of
             </Link>
           </li>
           <li className='nav-li'>
-            <Link to='/gifting'>
+            <Link to={'/gifting'}>
               Gifting
             </Link>
           </li>
           <li className='nav-li'>
-            <Link to='/contact'>
+            <Link to={'/contact'}>
               Contact
             </Link>
           </li>
         </ul>
       </div>
     </section >
-    </Router>
+    
   )
 }
 
