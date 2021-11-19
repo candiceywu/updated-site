@@ -38,8 +38,13 @@ function App() {
     <Router>
     <div className="App">
       {(user.password != "") ? (
-        <div className="welcome">
-          <Route path='/' exact component={Home}/>
+        <div className="container-fluid">
+          <Route path='/Home' component={Home}/>
+          <Route path='/schedule' component={Schedule} />
+          <Route path='/ceremony' component={Ceremony} />
+          <Route path='/lodging' component={Lodging} />
+          <Route path='/gifting' component={Gifting} />
+          <Route path='/contact' component={Contact} />
         </div>
       ) : (
         <LoginForm login={login} error={error} />
@@ -51,14 +56,3 @@ function App() {
 
 export default App;
 
-
-{/* <Router>
-          <div className="container-fluid">
-          <Route path='/' exact component={Home} />
-          <Route path='/schedule' component={Schedule} />
-          <Route path='/ceremony' component={Ceremony} />
-          <Route path='/lodging' component={Lodging} />
-          <Route path='/gifting' component={Gifting} />
-          <Route path='/contact' component={Contact} />
-          </div>
-      </Router> */}
