@@ -16,3 +16,8 @@ body {
     flex-flow: column;
     height: 100vh;
 }  
+
+.nav-li {
+  list-style-type: none;
+  text-decoration: none;
+}
