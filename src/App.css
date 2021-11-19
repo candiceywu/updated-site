@@ -46,7 +46,13 @@ html, body {
   height: 100%;
 }
 
-.container {
-  height: 100%;
+
+
+
+.form{
+  width: 500px;
 }
 
+.container{
+  padding:20px
+}
